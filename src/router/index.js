@@ -10,7 +10,13 @@ const routes = [
   {
     path: '/admin',
     name: 'admin',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Product/AdminView.vue')
+    children: [
+      {
+        path: 'product',
+        component: () => import('../views/Product/AdminView.vue'),
+        props: true
+      },
+    ]
   },
   {
     path: '/dangnhap',

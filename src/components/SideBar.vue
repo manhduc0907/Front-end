@@ -1,10 +1,10 @@
 <template>
   <v-navigation-drawer>
-    <v-toolbar style="background-color: white;">
+    <v-toolbar style="background-color: white">
       <v-row>
-        <v-col cols="8" >
+        <v-col cols="8">
           <v-img
-            src="https://res.cloudinary.com/dgtjdhrnq/image/upload/v1705460127/logo1_adshdl.png" 
+            src="https://res.cloudinary.com/dgtjdhrnq/image/upload/v1705460127/logo1_adshdl.png"
           ></v-img>
         </v-col>
         <v-col cols="4" class="text-right">
@@ -13,13 +13,13 @@
       </v-row>
     </v-toolbar>
     <v-list>
-       <v-list-subheader>Quản lí sản phẩm</v-list-subheader>
+      <v-list-subheader>Quản lí sản phẩm</v-list-subheader>
       <v-list-item
         v-for="(item, i) in links"
         :key="i"
         :value="item"
         color="primary"
-        @click="navigateToPage(item.route)"
+        :to="item.to"
       >
         <template v-slot:prepend>
           <v-icon :icon="item.icon"></v-icon>
@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       links: [
-        { icon: " mdi mdi-sale", text: "Sản Phẩm", to: "/components/ProductView" },
+        { icon: " mdi mdi-sale", text: "Sản Phẩm", to: "product" },
         {
           icon: "mdi mdi-account-multiple",
           text: "Users",
@@ -45,11 +45,6 @@ export default {
         },
       ],
     };
-  },
-  methods: {
-    navigateToPage(route) {
-      this.$router.push(route);
-    },
   },
 };
 </script>
