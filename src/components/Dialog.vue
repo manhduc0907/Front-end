@@ -37,7 +37,20 @@
 
 <script>
 export default {
-
+  name:'DialogView',
+  props: ['dialog'],
+    computed: {
+        ShowDialog: {
+            get() {
+                return this.dialog;
+            },
+            set(value) {
+                if (!value) {
+                    this.$emit('close');
+                }
+            }
+        }
+    }
 }
 </script>
 
