@@ -10,15 +10,16 @@ const routes = [
   {
     path: '/admin',
     name: 'admin',
+    component: () => import('../views/Admin/IndexView.vue'),
     children: [
       {
         path: 'product',
-        component: () => import('../views/Product/SanPham.vue'),
+        component: () => import('../views/Admin/SanPham.vue'),
         props: true
       },
       {
         path: 'users',
-        component: () => import('../views/Product/UserView.vue'),
+        component: () => import('../views/Admin/UserView.vue'),
         props: true
       },
     ]
@@ -26,7 +27,7 @@ const routes = [
   {
     path: '/dangnhap',
     name: 'DangNhap',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Product/DangNhap.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Admin/DangNhap.vue')
   }
 ]
 
