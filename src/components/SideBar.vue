@@ -19,7 +19,7 @@
         :key="i"
         :value="item"
         color="primary"
-        :to="item.to"
+        :to="item.route"
       >
         <template v-slot:prepend>
           <v-icon :icon="item.icon"></v-icon>
@@ -37,11 +37,11 @@ export default {
   data() {
     return {
       links: [
-        { icon: " mdi mdi-sale", text: "Sản Phẩm", to: "product" },
+        { icon: " mdi mdi-sale", text: "Sản Phẩm", route: "product" },
         {
           icon: "mdi mdi-account-multiple",
           text: "Users",
-          route: "/nguoi-dung",
+          route: "users",
         },
       ],
     };

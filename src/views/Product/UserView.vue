@@ -30,22 +30,15 @@
             <v-table density="compact">
               <thead>
                 <tr>
-                  <th class="text-left">Tên sản phẩm</th>
-                  <th class="text-left">Giá</th>
-                  <th class="text-left">Số lượng</th>
-                  <th class="text-left">Mô tả</th>
-                  <th class="text-left">Ảnh</th>
+                  <th class="text-left">Avatar</th>
+                  <th class="text-left">Tên người dùng</th>
+                  <th class="text-left">Ngày sinh</th>
+                  <th class="text-left">Số điện thoại</th>
                   <th class="text-center">Acction</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="i in 10" :key="i">
-                  <td>Sản phẩm {{ i }}</td>
-                  <td>$6,000</td>
-                  <td>1</td>
-                  <td style="width: 250px" class="v-text-truncate">
-                    Lorem ipsum dolor sit amet
-                  </td>
                   <td>
                     <v-img
                       width="60"
@@ -53,6 +46,9 @@
                       src="https://wall.vn/wp-content/uploads/2020/04/anh-dep-viet-nam-18.jpg"
                     ></v-img>
                   </td>
+                  <td>Người dùng {{ i }}</td>
+                  <td>09/07/2002</td>
+                  <td>0343595727</td>                 
                   <td class="text-center">
                     <v-btn variant="text"
                       ><v-icon>mdi mdi-pencil</v-icon></v-btn
@@ -95,7 +91,7 @@
 </template>
 
 <script>
-import DialogVue from "../../components/Dialog.vue";
+import DialogVue from "../../components/DialogUsers.vue";
 export default {
   data() {
     return {
@@ -103,7 +99,7 @@ export default {
     };
   },
   components: { DialogVue },
-  name: "SanPhamView",
+  name: "UserView",
 };
 </script>
 

@@ -13,7 +13,12 @@ const routes = [
     children: [
       {
         path: 'product',
-        component: () => import('../views/Product/AdminView.vue'),
+        component: () => import('../views/Product/SanPham.vue'),
+        props: true
+      },
+      {
+        path: 'users',
+        component: () => import('../views/Product/UserView.vue'),
         props: true
       },
     ]

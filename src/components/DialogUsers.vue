@@ -1,28 +1,28 @@
 <template>
    <v-dialog max-width="500px" v-model="showDialog">
         <v-card>
-            <v-card-title style="font-weight: bold;"><h4>Tạo mới sản phẩm</h4></v-card-title>
+            <v-card-title style="font-weight: bold;"><h4>Tạo mới người dùng</h4></v-card-title>
             <v-container style="background-color: rgb(247, 247, 247);">
               <v-row>
                 <v-col cols="12" style="font-size: 13px;">
-                  <p>Tên sản phẩm</p>
-                  <v-text-field placeholder="Nhập tên sản phẩm" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-text-field>
+                  <p>Tên người dùng</p>
+                  <v-text-field placeholder="Nhập tên người dùng" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-text-field>
                 </v-col>
                 <v-col cols="12" style="font-size: 13px;">
-                  <p>Giá</p>
-                  <v-text-field placeholder="Nhập giá sản phẩm" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-text-field>
+                  <p>Email</p>
+                  <v-text-field placeholder="Nhập email" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-text-field>
                 </v-col>
                 <v-col cols="12" style="font-size: 13px;">
-                  <p>Số lượng</p>
-                  <v-text-field placeholder="Nhập số lượng sản phẩm" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-text-field>
+                  <p>Ngày sinh</p>
+                  <v-text-field placeholder="YYYY/MM/DD" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-text-field>
                 </v-col>
                 <v-col cols="12" style="font-size: 13px;">
-                  <p>Mô tả</p>
-                  <v-textarea placeholder="Nhập mô tả" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-textarea>
+                  <p>Số điện thoại</p>
+                  <v-text-field placeholder="Nhập số điện thoại" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-text-field>
                 </v-col>
                 <v-col cols="12" style="font-size: 13px;">
-                  <p>Ảnh sản phẩm</p>
-                  <v-text-field placeholder="Nhập link ảnh" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-text-field>
+                  <p>Avatar</p>
+                  <v-text-field placeholder="Nhập link ảnh avatar" style="background-color: white;" density="compact" single-line hide-details variant="outlined"></v-text-field>
                 </v-col>
               </v-row>
             </v-container>
